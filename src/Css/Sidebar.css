@@ -1,0 +1,13 @@
+.sidebarMainBox{
+    display: flex;
+    flex-direction: column;
+    background-color: pink;
+    height: 80vh;
+    padding: 1%;
+    width: 20%;
+}
+
+
+.sidebarMainBox .components{
+    font-size: 22px;
+}

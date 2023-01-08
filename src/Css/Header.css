@@ -1,0 +1,22 @@
+.headermainBox{
+    display: flex;
+    width: 96%;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #4358F4;
+    color: white;
+    padding: 1% 2%;
+}
+
+.headermainBox .logoutBtn{
+    color: white;
+    background-color: red;
+    padding: 1% 2%;
+    border-radius: 10px;
+    border-color: red;
+}
+
+
+.headermainBox .logoutBtn:hover{
+    cursor: pointer;
+}
