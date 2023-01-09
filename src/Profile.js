@@ -1,15 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Header from "./Components/Header";
-import Sidebar from "./Components/Sidebar";
-import "./Css/Dashboard.css";
-import axios from "axios"
-import { useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+import Header from './Components/Header'
 
-const Dashboard = () => {
+const Profile = () => {
+    const navigate = useNavigate()
 
-  const navigate = useNavigate()
-  const [role, setRole] = useState("employee")  
-  const [name, setName] = useState("")
+    const [role, setRole] = useState("employee")  
+    const [userData, setUserData] = useState("")
 
 
 useEffect(() => {
@@ -17,12 +14,8 @@ useEffect(() => {
   if(data.role == "Admin"){
     setRole("Admin")
   }
-  setName(data.name)
+  setUserData(data)
 },[])
-  
-
-
-
   return (
     <div className="dashboardMainBox">
       <Header />
@@ -42,18 +35,16 @@ useEffect(() => {
   </div>
     }
 
-
-        {/* for admin */}
-        
-
-        {/* for employee */}
-       
-        <div className="dashboardBox">
-          <h1>Welcome {name}</h1>
-        </div>
-      </div>
+    <div>   
+        <h1>Name - {userData.name}</h1>
+        <h1>Email Id - {userData.email_id}</h1>
+        <h1>Department - {userData.department}</h1>
+        <h1>Phone Number - {userData.phone_number}</h1>
     </div>
-  );
-};
 
-export default Dashboard;
+</div>
+</div>
+  )
+}
+
+export default Profile

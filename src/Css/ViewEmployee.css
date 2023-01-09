@@ -1,0 +1,30 @@
+.viewDetailsMainBox{
+    width: 80%;
+    padding: 3% 0%;
+}
+
+.table{
+    width: 100%;
+}
+
+
+thead{
+    width: 100%;
+}
+
+
+thead th{
+    text-align: center;
+    font-size: 20px;
+}
+
+
+tbody td{
+    text-align: center;
+    font-size: 20px;
+}
+
+tbody .actionButton:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
